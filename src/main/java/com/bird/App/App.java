@@ -24,7 +24,9 @@ public class App {
 //        userDao.save();
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserDao userDao = (UserDao) ctx.getBean("userDao");
+        BookDao bookDao = (BookDao) ctx.getBean("bookDao");
         userDao.save();
+        bookDao.save();
 
 
     }

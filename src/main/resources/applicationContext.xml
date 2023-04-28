@@ -18,10 +18,18 @@
 <!--    <bean id="userFactory" class="com.bird.factory.UserDaoFactory"></bean>-->
 <!--    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"></bean>-->
 <!--    配置factorybean-->
-    <bean id="userDao" class="com.bird.factory.UserDaoFactoryBean">
+<!--    <bean id="userDao" class="com.bird.factory.UserDaoFactoryBean">-->
 
+<!--    </bean>-->
+    <bean id="bookDao" class="com.bird.dao.BookDaoImp1">
+        <property name='age' value="1"></property>
+        <property name="name" value="ggg"></property>
     </bean>
-
+    <bean id="userDao" class="com.bird.dao.UserDaoInple"></bean>
+    <bean id="bookService" class="com.bird.service.BookServiceImp1">
+        <property name="bookDao" ref="bookDao"></property>
+        <property name="userDao" ref="userDao"></property>
+    </bean>
 
 
 
