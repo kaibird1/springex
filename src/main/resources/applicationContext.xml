@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
 
@@ -21,17 +22,16 @@
 <!--    <bean id="userDao" class="com.bird.factory.UserDaoFactoryBean">-->
 
 <!--    </bean>-->
-    <bean id="bookDao" class="com.bird.dao.BookDaoImp1">
-        <property name='age' value="1"></property>
-        <property name="name" value="ggg"></property>
-    </bean>
-    <bean id="userDao" class="com.bird.dao.UserDaoInple"></bean>
-    <bean id="bookService" class="com.bird.service.BookServiceImp1">
-        <property name="bookDao" ref="bookDao"></property>
-        <property name="userDao" ref="userDao"></property>
-    </bean>
-
-
-
+<!--    <bean id="bookDao" class="com.bird.dao.BookDaoImp1">-->
+<!--        <property name='age' value="1"></property>-->
+<!--        <property name="name" value="ggg"></property>-->
+<!--    </bean>-->
+<!--    <bean id="userDao" class="com.bird.dao.UserDaoInple"></bean>-->
+<!--    <bean id="bookService" class="com.bird.service.BookServiceImp1">-->
+<!--        <property name="bookDao" ref="bookDao"></property>-->
+<!--        <property name="userDao" ref="userDao"></property>-->
+<!--    </bean>-->
+<!--    注解包扫描-->
+<!--    <context:component-scan base-package="com.bird"/>-->
 
 </beans>

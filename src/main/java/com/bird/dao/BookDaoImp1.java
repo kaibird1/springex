@@ -1,10 +1,13 @@
 package com.bird.dao;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @title:BookDaoImp1
  * @Author GKY
  * @Date:2023/4/2717:50
  */
+@Component("bookDao")
 public class BookDaoImp1 implements BookDao{
     private int age;
     private String name;
